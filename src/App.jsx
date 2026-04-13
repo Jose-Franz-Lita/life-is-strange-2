@@ -23,27 +23,32 @@ function App() {
     {
       number: 1,
       title: 'Roads',
-      description: 'The journey begins when a tragic incident forces brothers Sean and Daniel to flee their home. They must survive on the run with Daniel\'s newly discovered telekinetic powers.'
+      description: 'The journey begins when a tragic incident forces brothers Sean and Daniel to flee their home. They must survive on the run with Daniel\'s newly discovered telekinetic powers.',
+      image: './episode1.jpg'
     },
     {
       number: 2,
       title: 'Rules',
-      description: 'As the brothers travel, they learn to navigate their new life. Sean must establish rules to keep Daniel safe and in control of his powers.'
+      description: 'As the brothers travel, they learn to navigate their new life. Sean must establish rules to keep Daniel safe and in control of his powers.',
+      image: './episode2.png'
     },
     {
       number: 3,
       title: 'Wastelands',
-      description: 'The brothers face new challenges and meet new people. Trust becomes a precious commodity as they continue their journey south.'
+      description: 'The brothers face new challenges and meet new people. Trust becomes a precious commodity as they continue their journey south.',
+      image: './episode3.png'
     },
     {
       number: 4,
       title: 'Faith',
-      description: 'Tested by hardship and betrayal, the brothers must decide what they believe in. Their bond is pushed to its limits.'
+      description: 'Tested by hardship and betrayal, the brothers must decide what they believe in. Their bond is pushed to its limits.',
+      image: './episode4.jpg'
     },
     {
       number: 5,
       title: 'Wolves',
-      description: 'The final episode brings the brothers\' journey to its conclusion. Every choice made along the way determines their fate.'
+      description: 'The final episode brings the brothers\' journey to its conclusion. Every choice made along the way determines their fate.',
+      image: './episode5.png'
     }
   ]
 
@@ -219,6 +224,9 @@ function App() {
           <div className="episodes-grid">
             {episodes.map((episode) => (
               <div key={episode.number} className="episode-card">
+                <div className="episode-image-container">
+                  <img src={episode.image} alt={episode.title} className="episode-image" />
+                </div>
                 <div className="episode-header">
                   <div className="episode-number-circle">
                     <span className="number">{episode.number}</span>
