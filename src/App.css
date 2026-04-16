@@ -369,22 +369,21 @@ body {
   border-top: 5px solid var(--secondary-color);
 }
 
-.episode-card > div:first-child {
+.episode-image-container {
   width: 100%;
   height: 200px;
   overflow: hidden;
   background: #f0ebe5;
 }
 
-.episode-card > div:first-child > img {
+.episode-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
-  display: block;
 }
 
-.episode-card:hover > div:first-child > img {
+.episode-card:hover .episode-image {
   transform: scale(1.05);
 }
 
