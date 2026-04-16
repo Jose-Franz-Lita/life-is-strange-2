@@ -224,8 +224,8 @@ function App() {
           <div className="episodes-grid">
             {episodes.map((episode) => (
               <div key={episode.number} className="episode-card">
-                <div className="episode-image-container" style={{ width: '100%', height: '200px', overflow: 'hidden', background: '#f0ebe5' }}>
-                  <img src={episode.image} alt={episode.title} className="episode-image" style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.3s ease' }} />
+                <div className="episode-image-container">
+                  <img src={episode.image} alt={episode.title} className="episode-image" />
                 </div>
                 <div className="episode-header">
                   <div className="episode-number-circle">
