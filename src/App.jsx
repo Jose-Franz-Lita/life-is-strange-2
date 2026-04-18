@@ -1,5 +1,10 @@
 import { useState } from 'react'
 import './App.css'
+import episode1 from './episode1.jpg'
+import episode2 from './episode2.png'
+import episode3 from './episode3.png'
+import episode4 from './episode4.jpg'
+import episode5 from './episode5.png'
 
 function App() {
   const [activeTab, setActiveTab] = useState('overview')
@@ -24,31 +29,31 @@ function App() {
       number: 1,
       title: 'Roads',
       description: 'The journey begins when a tragic incident forces brothers Sean and Daniel to flee their home. They must survive on the run with Daniel\'s newly discovered telekinetic powers.',
-      image: './episode1.jpg'
+      image: episode1
     },
     {
       number: 2,
       title: 'Rules',
       description: 'As the brothers travel, they learn to navigate their new life. Sean must establish rules to keep Daniel safe and in control of his powers.',
-      image: './episode2.png'
+      image: episode2
     },
     {
       number: 3,
       title: 'Wastelands',
       description: 'The brothers face new challenges and meet new people. Trust becomes a precious commodity as they continue their journey south.',
-      image: './episode3.png'
+      image: episode3
     },
     {
       number: 4,
       title: 'Faith',
       description: 'Tested by hardship and betrayal, the brothers must decide what they believe in. Their bond is pushed to its limits.',
-      image: './episode4.jpg'
+      image: episode4
     },
     {
       number: 5,
       title: 'Wolves',
       description: 'The final episode brings the brothers\' journey to its conclusion. Every choice made along the way determines their fate.',
-      image: './episode5.png'
+      image: episode5
     }
   ]
 
@@ -223,7 +228,7 @@ function App() {
           
           <div className="episodes-grid">
             {episodes.map((episode) => (
-              <div key={episode.number} className="episode-card">
+              <div key={episode.number} className="episode-card" data-image={episode.image}>
                 <div className="episode-image-container">
                   <img src={episode.image} alt={episode.title} className="episode-image" />
                 </div>
