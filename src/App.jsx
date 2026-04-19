@@ -1,10 +1,5 @@
 import { useState } from 'react'
 import './App.css'
-import episode1 from './episode1.jpg'
-import episode2 from './episode2.png'
-import episode3 from './episode3.png'
-import episode4 from './episode4.jpg'
-import episode5 from './episode5.png'
 
 function App() {
   const [activeTab, setActiveTab] = useState('overview')
@@ -28,34 +23,40 @@ function App() {
     {
       number: 1,
       title: 'Roads',
-      description: 'The journey begins when a tragic incident forces brothers Sean and Daniel to flee their home. They must survive on the run with Daniel\'s newly discovered telekinetic powers.',
-      image: episode1
+      description: 'The journey begins when a tragic incident forces brothers Sean and Daniel to flee their home. They must survive on the run with Daniel\'s newly discovered telekinetic powers.'
     },
     {
       number: 2,
       title: 'Rules',
-      description: 'As the brothers travel, they learn to navigate their new life. Sean must establish rules to keep Daniel safe and in control of his powers.',
-      image: episode2
+      description: 'As the brothers travel, they learn to navigate their new life. Sean must establish rules to keep Daniel safe and in control of his powers.'
     },
     {
       number: 3,
       title: 'Wastelands',
-      description: 'The brothers face new challenges and meet new people. Trust becomes a precious commodity as they continue their journey south.',
-      image: episode3
+      description: 'The brothers face new challenges and meet new people. Trust becomes a precious commodity as they continue their journey south.'
     },
     {
       number: 4,
       title: 'Faith',
-      description: 'Tested by hardship and betrayal, the brothers must decide what they believe in. Their bond is pushed to its limits.',
-      image: episode4
+      description: 'Tested by hardship and betrayal, the brothers must decide what they believe in. Their bond is pushed to its limits.'
     },
     {
       number: 5,
       title: 'Wolves',
-      description: 'The final episode brings the brothers\' journey to its conclusion. Every choice made along the way determines their fate.',
-      image: episode5
+      description: 'The final episode brings the brothers\' journey to its conclusion. Every choice made along the way determines their fate.'
     }
   ]
+
+  const getEpisodeImage = (number) => {
+    const images = {
+      1: '/episode1.jpg',
+      2: '/episode2.png',
+      3: '/episode3.png',
+      4: '/episode4.jpg',
+      5: '/episode5.png'
+    }
+    return images[number]
+  }
 
   const endings = [
     {
@@ -227,22 +228,76 @@ function App() {
           <p className="section-intro">Explore all 5 episodes of Life is Strange 2</p>
           
           <div className="episodes-grid">
-            {episodes.map((episode) => (
-              <div key={episode.number} className="episode-card" data-image={episode.image}>
-                <div className="episode-image-container">
-                  <img src={episode.image} alt={episode.title} className="episode-image" />
-                </div>
-                <div className="episode-header">
-                  <div className="episode-number-circle">
-                    <span className="number">{episode.number}</span>
-                  </div>
-                  <h3>{episode.title}</h3>
-                </div>
-                <div className="episode-content">
-                  <p>{episode.description}</p>
-                </div>
+            <div className="episode-card">
+              <div className="episode-image-container">
+                <img src="/episode1.jpg" alt="Roads" className="episode-image" />
               </div>
-            ))}
+              <div className="episode-header">
+                <div className="episode-number-circle">
+                  <span className="number">1</span>
+                </div>
+                <h3>Roads</h3>
+              </div>
+              <div className="episode-content">
+                <p>The journey begins when a tragic incident forces brothers Sean and Daniel to flee their home. They must survive on the run with Daniel's newly discovered telekinetic powers.</p>
+              </div>
+            </div>
+            <div className="episode-card">
+              <div className="episode-image-container">
+                <img src="/episode2.png" alt="Rules" className="episode-image" />
+              </div>
+              <div className="episode-header">
+                <div className="episode-number-circle">
+                  <span className="number">2</span>
+                </div>
+                <h3>Rules</h3>
+              </div>
+              <div className="episode-content">
+                <p>As the brothers travel, they learn to navigate their new life. Sean must establish rules to keep Daniel safe and in control of his powers.</p>
+              </div>
+            </div>
+            <div className="episode-card">
+              <div className="episode-image-container">
+                <img src="/episode3.png" alt="Wastelands" className="episode-image" />
+              </div>
+              <div className="episode-header">
+                <div className="episode-number-circle">
+                  <span className="number">3</span>
+                </div>
+                <h3>Wastelands</h3>
+              </div>
+              <div className="episode-content">
+                <p>The brothers face new challenges and meet new people. Trust becomes a precious commodity as they continue their journey south.</p>
+              </div>
+            </div>
+            <div className="episode-card">
+              <div className="episode-image-container">
+                <img src="/episode4.jpg" alt="Faith" className="episode-image" />
+              </div>
+              <div className="episode-header">
+                <div className="episode-number-circle">
+                  <span className="number">4</span>
+                </div>
+                <h3>Faith</h3>
+              </div>
+              <div className="episode-content">
+                <p>Tested by hardship and betrayal, the brothers must decide what they believe in. Their bond is pushed to its limits.</p>
+              </div>
+            </div>
+            <div className="episode-card">
+              <div className="episode-image-container">
+                <img src="/episode5.png" alt="Wolves" className="episode-image" />
+              </div>
+              <div className="episode-header">
+                <div className="episode-number-circle">
+                  <span className="number">5</span>
+                </div>
+                <h3>Wolves</h3>
+              </div>
+              <div className="episode-content">
+                <p>The final episode brings the brothers' journey to its conclusion. Every choice made along the way determines their fate.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
