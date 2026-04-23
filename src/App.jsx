@@ -225,15 +225,7 @@ function App() {
             {episodes.map((episode, index) => (
               <div key={index} className="episode-card">
                 <div className="episode-image-container">
-                  <img 
-                    src={episode.image} 
-                    alt={`Episode ${episode.number}: ${episode.title}`} 
-                    className="episode-image" 
-                    onError={(e) => {
-                      console.error(`Failed to load image: ${episode.image}`);
-                      e.target.src = 'https://via.placeholder.com/400x225?text=Image+Not+Found';
-                    }}
-                  />
+                  <img src={episode.image} alt={episode.title} className="episode-image" />
                 </div>
                 <div className="episode-header">
                   <div className="episode-number-circle">
