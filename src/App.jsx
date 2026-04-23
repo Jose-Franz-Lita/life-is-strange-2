@@ -9,13 +9,13 @@ function App() {
       name: 'Sean Diaz',
       role: 'Protagonist',
       description: 'A 16-year-old boy who must protect his younger brother Daniel after a tragic incident. Sean is resourceful, protective, and must make difficult moral choices to survive.',
-      image: '/sean-diaz.jpg'
+      image: './sean-diaz.jpg'
     },
     {
       name: 'Daniel Diaz',
       role: 'Protagonist',
       description: 'Sean\'s 9-year-old brother who possesses telekinetic powers. Innocent and impressionable, Daniel\'s actions are shaped by Sean\'s choices and guidance.',
-      image: '/daniel-diaz.jpg'
+      image: './daniel-diaz.jpg'
     }
   ]
 
@@ -24,31 +24,31 @@ function App() {
       number: 1,
       title: 'Roads',
       description: 'The journey begins when a tragic incident forces brothers Sean and Daniel to flee their home. They must survive on the run with Daniel\'s newly discovered telekinetic powers.',
-      image: '/episode1.jpg'
+      image: './episode1.jpg'
     },
     {
       number: 2,
       title: 'Rules',
       description: 'As the brothers travel, they learn to navigate their new life. Sean must establish rules to keep Daniel safe and in control of his powers.',
-      image: '/episode2.png'
+      image: './episode2.png'
     },
     {
       number: 3,
       title: 'Wastelands',
       description: 'The brothers face new challenges and meet new people. Trust becomes a precious commodity as they continue their journey south.',
-      image: '/episode3.png'
+      image: './episode3.png'
     },
     {
       number: 4,
       title: 'Faith',
       description: 'Tested by hardship and betrayal, the brothers must decide what they believe in. Their bond is pushed to its limits.',
-      image: '/episode4.jpg'
+      image: './episode4.jpg'
     },
     {
       number: 5,
       title: 'Wolves',
       description: 'The final episode brings the brothers\' journey to its conclusion. Every choice made along the way determines their fate.',
-      image: '/episode5.png'
+      image: './episode5.png'
     }
   ]
 
@@ -57,25 +57,25 @@ function App() {
       title: 'Redemption Ending',
       morality: 'High Morality',
       description: 'Sean turns himself in to the police, allowing Daniel to have a normal life with a foster family. Sean faces prison but finds redemption knowing his brother is safe.',
-      image: '/ending1.jpg'
+      image: './ending1.jpg'
     },
     {
       title: 'Blood Brothers Ending',
       morality: 'High Morality',
       description: 'Sean and Daniel escape to Mexico together, leaving their past behind. They start a new life together, stronger than ever.',
-      image: '/ending2.jpg'
+      image: './ending2.jpg'
     },
     {
       title: 'Parting Ways Ending',
       morality: 'Low Morality',
       description: 'Sean and Daniel separate at the border. Daniel is taken by authorities while Sean escapes, haunted by the choices they made.',
-      image: '/ending3.jpg'
+      image: './ending3.jpg'
     },
     {
       title: 'Tragic Ending',
       morality: 'Low Morality',
       description: 'Sean dies protecting Daniel at the border. Daniel is left alone to face an uncertain future, a tragic conclusion to their journey.',
-      image: '/ending4.jpg'
+      image: './ending4.jpg'
     }
   ]
 
@@ -85,7 +85,7 @@ function App() {
       <nav className="navbar">
         <div className="nav-container">
           <div className="nav-logo">
-            <img src="/lis2-nav-logo.png" alt="Life is Strange 2" className="logo-img" />
+            <img src="./lis2-nav-logo.png" alt="Life is Strange 2" className="logo-img" />
           </div>
           <ul className="nav-menu">
             <li><a href="#home" onClick={() => setActiveTab('overview')}>Home</a></li>
@@ -100,7 +100,7 @@ function App() {
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-image-container">
-          <img src="/lis2-hero.jpg" alt="Life is Strange 2" className="hero-image" />
+          <img src="./lis2-hero.jpg" alt="Life is Strange 2" className="hero-image" />
           <div className="hero-overlay"></div>
         </div>
         <div className="hero-content">
@@ -115,7 +115,7 @@ function App() {
         <div className="container">
           <h2>Welcome to the Road</h2>
           <div className="logo-section">
-            <img src="/lis2-logo.png" alt="Life is Strange 2 Logo" className="section-logo" />
+            <img src="./lis2-logo.png" alt="Life is Strange 2 Logo" className="section-logo" />
           </div>
           <p className="section-intro">
             Life is Strange 2 follows brothers Sean and Daniel Diaz as they flee across America after a tragic incident. 
