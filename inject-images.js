@@ -2,11 +2,11 @@
 document.addEventListener('DOMContentLoaded', function() {
   // Wait a bit for React to render
   setTimeout(function() {
-    const episodes = [      { number: 1, image: './episode1.jpg' },
-      { number: 2, image: './episode2.png' },
-      { number: 3, image: './episode3.png' },
-      { number: 4, image: './episode4.jpg' },
-      { number: 5, image: './episode5.png' },
+    const episodes = [      { number: 1, image: './dist/episode1.jpg' },
+      { number: 2, image: './dist/episode2.png' },
+      { number: 3, image: './dist/episode3.png' },
+      { number: 4, image: './dist/episode4.jpg' },
+      { number: 5, image: './dist/episode5.png' },
     ];
 
     // Find all episode cards
